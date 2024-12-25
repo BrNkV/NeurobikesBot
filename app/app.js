@@ -15,7 +15,7 @@ bot.on('message', (msg) => {
 
   // Simple greeting response
   if (text.includes('hi')) {
-    bot.sendMessage(chatId, `'Hello dear user!'+'Chat ID ${chatId} 1dsd'`);
+    bot.sendMessage(chatId, `'Hello dear user!'+'Chat ID ${chatId} 1dsd 123aa'`);
     console.log(chatId);
   } else {
     bot.sendMessage(chatId, 'I am a simple bot. Send "hi" to get a greeting!');
