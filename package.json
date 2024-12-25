@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/BrNkV/NeurobikesBot#readme",
   "dependencies": {
-    "node-telegram-bot-api": "^0.66.0"
+    "node-telegram-bot-api": "^0.63.0"
   }
 }
