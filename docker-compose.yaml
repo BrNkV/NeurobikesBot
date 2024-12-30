@@ -1,12 +1,17 @@
 version: '3.8'
 services:
-  app:
-    build: ./app
-    container_name: neurobikesbot
-    image: node:alpine
-    volumes:
-      - .:/app
-    working_dir: /app
-    command: npm run dev
-    ports:
-      - 8080:3000
+  telegram-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+    # container_name: neurobikesbot
+    # volumes:
+    #   - .:/app
+    # working_dir: /app
+    # command: npm run dev
+    # ports:
+    # - "8080:3000"
+    # - "80:80"
+    # - "8443:8443"
