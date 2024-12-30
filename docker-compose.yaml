@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  app:
+  telegram-bot:
     build: ./app
     container_name: neurobikesbot
     image: node:22-alpine
