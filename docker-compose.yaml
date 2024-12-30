@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  app:
+    build: ./app
+    container_name: neurobikesbot
+    image: node:alpine
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: npm run dev
+    ports:
+      - 8080:3000

@@ -9,15 +9,16 @@ const bot = new TelegramBot(token, { polling: true });
 
 // Listen for any incoming messages
 bot.on('message', (msg) => {
-  const chatId = msg.chat.id;
+
+  const chatId = msg.chat.id; 
   console.log(msg);
-  const text = msg.text.toLowerCase();
+  const text = msg.text.toLowerCase(); //  Convert the incoming message to lowercase
 
   // Simple greeting response
   if (text.includes('hi')) {
     bot.sendMessage(
       chatId,
-      `'Hello dear ${msg.chat.username}!'+'Chat ID ${chatId} 1dsd 123aa'`,
+      `'Hello dear ${msg.chat.username}!'+'Chat ID ${chatId} ${msg.chat.first_name} '`,
     );
     console.log(chatId);
   } else {
