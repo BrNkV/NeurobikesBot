@@ -3,12 +3,12 @@ services:
   app:
     build: ./app
     container_name: neurobikesbot
-    image: node:alpine
+    image: node:22-alpine
     volumes:
       - .:/app
     working_dir: /app
     command: npm run dev
-    ports:
-      - "8080:3000"
-      - "80:80"  # Убедитесь, что порт соответствует вашему приложению
-      - "8443:8443"
+    # ports:
+    # - "8080:3000"
+    # - "80:80"
+    # - "8443:8443"
