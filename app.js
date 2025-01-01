@@ -18,7 +18,7 @@ bot.on('message', (msg) => {
   if (text.includes('hi')) {
     bot.sendMessage(
       chatId,
-      `'Hello dear ${msg.chat.username}!'+'Chat ID TEST(new) ${chatId} ${msg.chat.first_name} '`,
+      `'Hello dear ${msg.chat.username}!'+'Chat ID TEST(docker) ${chatId} ${msg.chat.first_name} '`,
     );
     console.log(chatId);
   } else {
