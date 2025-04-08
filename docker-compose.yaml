@@ -19,13 +19,13 @@ version: '3.8'
 
 services:
   bot:
-    image: node:22-alpine  # Используем образ Node.js 16
+    build: .  # Используем образ Node.js 16
     container_name: telegram_bot
     restart: unless-stopped
     working_dir: /app
     volumes:
       - ./:/app  # Монтируем текущую директорию в /app внутри контейнера
-      # - ./node_modules:/app/node_modules
+      - ./node_modules:/app/node_modules
     # ports:
     #   - "3000:3000"  # Порт для отладки (если нужно)
     environment:

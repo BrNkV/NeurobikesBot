@@ -15,10 +15,17 @@ bot.on('message', (msg) => {
   const text = msg.text.toLowerCase(); //  Convert the incoming message to lowercase
 
   // Simple greeting response
-  if (text.includes('hi')) {
+  if(msg.from.id="252823261" && text.includes('admin 1')){
     bot.sendMessage(
       chatId,
-      `'Hello dear ${msg.chat.username}!'+'Chat ID TEST(docker compose from VPS 06022025) ${chatId} ${msg.chat.first_name} '`,
+      `'Hello dear Admin ${msg.chat.username}!'`,
+    );
+  }
+  
+  else if (text.includes('hi')) {
+    bot.sendMessage(
+      chatId,
+      `'Hello dear ${msg.chat.username}!'+'Chat ID TEST(docker compose from VPS 126032025) ${chatId} ${msg.chat.first_name} '`,
     );
     console.log(chatId);
   } else {
